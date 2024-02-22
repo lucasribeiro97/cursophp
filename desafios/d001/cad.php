@@ -14,11 +14,14 @@
   </header>
   <main>
     <?php
-      $numero = $_GET['numero'];
+      $numero = $_GET['numero'] ?? 0;
       echo "<p>O número informado foi $numero</p>";
       echo "<p>O seu antecessor é " . ($numero - 1) . "</p>";
       echo "<p>O seu sucessor é " . ($numero + 1) . "</p>";
     ?>
+    <a href="javascript:history.go(-1)">
+      <button>Voltar</button>
+    </a>
   </main>
 </body>
 
